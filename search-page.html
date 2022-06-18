@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Finder Search</title>
+    <script src="./develop/js/display-search.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="navbar-title"> <h1>Concert Finder</h1> </span> <span id="navbar-link"> <a href="./index.html">Home Page</a> </span>
+    </header>
+
+    <section>
+        <form id="search-form">
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist-input" name="fname">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre-input" name="genre">
+            <label for="location">Location:</label>
+            <input type="text" id="location-input" name="location"> <br>
+
+            <input type="submit" value="Search" id="search-btn">
+        </form>
+    </section>
+
+    <div class="container" id="map-container">
+        <!-- map goes here -->
+    </div>
+</body>
+
+</html>
