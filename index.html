@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concert Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
         <!-- nav bar goes here -->
-        <h1>Concert Finder</h1>
+        <h1 class="text ">Concert Finder</h1>
     </header>
+
+
+    <nav class="flex tracking-widest ">
+        <h2 class="ml-10">Concert Finder</h2>
+
+        <h2 class="ml-80" >Search Page</h2>
+
+
+    </nav>
 
     <section>
         <!-- form goes here -->
-        <form>
+        <form class = "block ">
             <label for="artist">Artist:</label>
             <input type="text" id="artist" name="fname">
             <label for="genre">Genre:</label>
@@ -23,35 +34,82 @@
             <input type="text" id="location" name="location"> <br>
 
             <input type="submit" value="Search" id="search-btn">
+            <button class="bg-cyan-400 rounded" id="searchButton">Search</button>
           </form>
     </section>
 
     <main>
         <!-- genre cards go here -->
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+            <section class="rockCard mt-20">
+
+
+            <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"> Rock</p>
+
+            </section>
+
 
         </div>
 
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+
+            <section class="popCard mt-20">
+
+            <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"> Pop</p>
+
+            </section>
+
 
         </div>
 
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+
+            <section class="rapCard mt-20">           
+                 <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"> Rap</p>
+            </section>
+
+
 
         </div>
 
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+
+            <section class="countryCard mt-20">
+
+                <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"> Country</p>
+
+
+            </section>
+
+
 
         </div>
 
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+
+            <section class="instrumentalCard mt-20">
+                <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Instrumental</p>
+
+            </section>
+
+
 
         </div>
 
-        <div class="container">
+        <div class="container text-center border-solid border-4 border-black">
+
+            <section class="animeCard mt-20">
+                <p class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Anime Music</p>
+
+            </section>
+
+
 
         </div>
 
     </main>
 </body>
+
+
+
 </html>

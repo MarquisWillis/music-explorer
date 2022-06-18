@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav {
+    height: 80px;
+
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.container {
+   
+
+    flex-basis: 25%;
+    margin: 10px 40px;
+    height: 200px;
+
+
+}
+
+form {
+    margin-left: 350px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 50%;
+    height: 300px;
+}
+
+
