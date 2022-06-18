@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concert Finder</title>
+    <script src="./develop/js/homepage.js"></script>
 </head>
 <body>
     <header>
         <!-- nav bar goes here -->
-        <span><h1>Concert Finder</h1></span> <span> <a href="./search-page.html">Search Page</a> </span>
+        <span id="navbar-title"> <h1>Concert Finder</h1> </span> <span id="navbar-link"> <a href="./search-page.html">Search Page</a> </span>
     </header>
 
     <section>
         <!-- form goes here -->
-        <form>
+        <form id="search-form">
             <label for="artist">Artist:</label>
-            <input type="text" id="artist" name="fname">
+            <input type="text" id="artist-input" name="artist">
             <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre">
+            <input type="text" id="genre-input" name="genre">
             <label for="location">Location:</label>
-            <input type="text" id="location" name="location"> <br>
+            <input type="text" id="location-input" name="location"> <br>
 
             <input type="submit" value="Search" id="search-btn">
           </form>
     </section>
 
-    <main class="container">
+    <main class="container" id="genre-container">
         <!-- genre cards go here -->
         <div class="container">
 
