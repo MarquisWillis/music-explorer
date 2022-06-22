@@ -2,60 +2,153 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Concert Finder</title>
-	<!--linking css and javascript-->
-	<link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./develop/js/homepage.js"></script>
 </head>
 
 <body>
-	<!-- nav bar goes here -->
-	<header id="hero">
-		<h1>Concert finder</h1>
 
-		<!-- form goes here -->
-		<section>
-			<form>
-				<p style="text-align:right;">
-					<label for="search-page"></label>
-					<input type="text" id="search-page" name="fname" />
-					<input type="submit" value="Search" id="search-page-btn" />
-					<hr>
-				</p>
-			</form>
-		</section>
-	</header>
+    <nav class="flex">
+        <span>
+            <h1 class="ml-10" class="justify-start">Concert Finder</h1>
+        </span>
 
-	<section>
-		<!-- form goes here -->
-		<form>
-			<label for="artist">Artist:</label>
-			<input type="text" id="artist" name="fname" />
-			<label for="genre">Genre:</label>
-			<input type="text" id="genre" name="genre" />
-			<label for="location">Location:</label>
-			<input type="text" id="location" name="location" /> <br />
-			<input type="submit" value="Search" id="search-btn" />
-			</p>
-		</form>
-	</section>
+        <span id="navbar-link"> <a href="./search-page.html">
+                <h2 class="ml-80 justify-end">Search Page</h2>
+            </a> </span>
 
-	<main>
-		<!-- genre cards go here -->
+
+    </nav>
+
+    <section>
+        <!-- form goes here -->
+        <form class="block ml-96" id="search-form">
+
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist-input" name="artist">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre-input" name="genre">
+            <label for="location">Location:</label>
+            <input type="text" id="location-input" name="location"> <br>
+
+            <input type="submit" value="Search" id="search-btn">
+            <button class="bg-cyan-400 rounded" id="searchButton">Search</button>
+        </form>
+    </section>
+
+    <main class="container" id="genre-container">
+        <!-- genre cards go here -->
+
+
+        <div class="container genre-card text-center border-solid border-4 border-black bg-rose-400 shadow-xl ml-28">
+            <section class="rockCard mt-20">
+
+
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-white-900 hover:underline"> Rock</p>
+
+            </section>
+
+
 		<div class="container"></div>
 
-		<div class="container"></div>
+        <div class="container genre-card text-center border-solid border-4 border-black bg-fuchsia-700 shadow-xl">
+
+            <section class="popCard mt-20">
+
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Pop</p>
+
+            </section>
+
 
 		<div class="container"></div>
 
-		<div class="container"></div>
+        <div class="container genre-card text-center border-solid border-4 border-black bg-sky-800 shadow-xl">
 
-		<div class="container"></div>
+            <section class="rapCard mt-20">
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Rap</p>
+            </section>
 
-		<div class="container"></div>
-	</main>
+
+
+        </div>
+
+
+
+        <div class="container genre-card text-center border-solid border-4 border-black bg-green-400 shadow-xl ml-28">
+
+            <section class="countryCard mt-20">
+
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Country
+                </p>
+
+
+            </section>
+
+
+
+        </div>
+
+        <div class="container genre-card text-center border-solid border-4 border-black bg-amber-400 shadow-xl ">
+
+            <section class="instrumentalCard mt-20">
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline">
+                    Instrumental</p>
+
+            </section>
+
+
+
+        </div>
+
+        <div class="container genre-card text-center border-solid border-4 border-black bg-red-500 shadow-xl">
+
+            <section class="animeCard mt-20">
+                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline">Anime Music
+                </p>
+
+            </section>
+
+
+
+        </div>
+
+
+    </main>
+
+    <section id="searchResults" class="hidden">
+        <form id="search-form2">
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist-input" name="fname">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre-input" name="genre">
+            <label for="location">Location:</label>
+            <input type="text" id="location-input" name="location"> <br>
+
+            <input type="submit" value="Search" id="search-btn">
+        </form>
+        <aside>
+            <!--popular artist by genre (did we want to keep this part?)-->
+            <h4>Popular Artists</h4>
+            <div class="container" id="popArtist2"></div>
+        </aside>
+
+
+        <div class="container" id="search-result2">
+            <!--results-->
+        </div>
+
+        <div class="container" id="map-container2">
+            <!-- map goes here -->
+        </div>
+    </section>
+
 </body>
+
+
 
 </html>
