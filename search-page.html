@@ -18,22 +18,24 @@
     </header>
     <nav class="flex justify-end"><span id="navbar-link" class="w-1/6 h-7 text-slate-50 bg-violet-500 mr-4 hover:underline hover:bg-violet-600 rounded-lg"> <a href="./index.html" class=" flex justify-center">Home Page</a> </span></nav>
 
-    <section class=" flex justify-center">
-        <form id="search-form" class=" flex flex-wrap">
-            <label for="artist" class="w-1/12 mb-5 mt-11 ml-8 flex justify-center" >Artist:</label>
-            <input type="text" id="artist-input" name="fname" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 mb-5 mt-10 bg-green-100 text-slate-900">
-            <label for="genre" class="w-1/12 my-6 ml-8 flex justify-center">Genre:</label>
-            <input type="text" id="genre-input" name="genre" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 my-5 bg-green-100">
-            <label for="location" class="w-1/12 my-6 ml-8 flex justify-center">Location:</label>
-            <input type="text" id="location-input" name="location" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 my-5 bg-green-100"> <br>
 
-            <input type="submit" value="Search" id="search-btn" class="w-1/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-[640px]">
-        </form>
-    </section>
 
     <div class="container" id="map-container">
         <!-- map goes here -->
     </div>
 </body>
+
+<aside class=" h-max w-1/4 border-2 border-gray-400">
+    <form id="search-form" class=" flex flex-wrap">
+        <label for="artist" class="w-1/12 mb-5 mt-11 ml-8 flex justify-center" >Artist:</label>
+        <input type="text" id="artist-input" name="fname" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 mt-10 bg-green-100 text-slate-900">
+        <label for="genre" class="w-1/12 my-6 ml-8 flex justify-center">Genre:</label>
+        <input type="text" id="genre-input" name="genre" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100">
+        <label for="location" class="w-1/12 my-6 ml-8 flex justify-center">Location:</label>
+        <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100"> <br>
+
+        <input type="submit" value="Search" id="search-btn" class="w-1/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-36">
+    </form>
+</aside>
 
 </html>
