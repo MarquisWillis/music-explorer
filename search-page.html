@@ -6,24 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concert Finder Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./develop/js/display-search.js" defer></script>
+
 </head>
 
 <body>
-    <header>
-        <span id="navbar-title"> <h1>Concert Finder</h1> </span> <span id="navbar-link"> <a href="./index.html">Home Page</a> </span>
+    <header >
+        <span id="navbar-title"> <h1 class=" flex justify-center text-4xl mt-8">Concert Finder</h1> </span>
+        
     </header>
+    <nav class="flex justify-end"><span id="navbar-link" class="w-1/6 h-7 text-slate-50 bg-violet-500 mr-4 hover:underline hover:bg-violet-600 rounded-lg"> <a href="./index.html" class=" flex justify-center">Home Page</a> </span></nav>
 
-    <section>
-        <form id="search-form">
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist-input" name="fname">
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre-input" name="genre">
-            <label for="location">Location:</label>
-            <input type="text" id="location-input" name="location"> <br>
+    <section class=" flex justify-center">
+        <form id="search-form" class=" flex flex-wrap">
+            <label for="artist" class="w-1/12 mb-5 mt-11 ml-8 flex justify-center" >Artist:</label>
+            <input type="text" id="artist-input" name="fname" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 mb-5 mt-10 bg-green-100 text-slate-900">
+            <label for="genre" class="w-1/12 my-6 ml-8 flex justify-center">Genre:</label>
+            <input type="text" id="genre-input" name="genre" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 my-5 bg-green-100">
+            <label for="location" class="w-1/12 my-6 ml-8 flex justify-center">Location:</label>
+            <input type="text" id="location-input" name="location" class="w-4/5 h-10 border-2 border-gray-400 rounded mr-8 my-5 bg-green-100"> <br>
 
-            <input type="submit" value="Search" id="search-btn">
+            <input type="submit" value="Search" id="search-btn" class="w-1/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-[640px]">
         </form>
     </section>
 
