@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concert Finder</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Concert Finder</title>
+	<!--linking css and javascript-->
+	<link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <header>
-        <!-- nav bar goes here -->
-        <h1>Concert Finder</h1>
-    </header>
+	<!-- nav bar goes here -->
+	<header id="hero">
+		<h1>Concert finder</h1>
 
-    <section>
-        <!-- form goes here -->
-        <form>
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist" name="fname">
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location"> <br>
+		<!-- form goes here -->
+		<section>
+			<form>
+				<p style="text-align:right;">
+					<label for="search-page"></label>
+					<input type="text" id="search-page" name="fname" />
+					<input type="submit" value="Search" id="search-page-btn" />
+					<hr>
+				</p>
+			</form>
+		</section>
+	</header>
 
-            <input type="submit" value="Search" id="search-btn">
-          </form>
-    </section>
+	<section>
+		<!-- form goes here -->
+		<form>
+			<label for="artist">Artist:</label>
+			<input type="text" id="artist" name="fname" />
+			<label for="genre">Genre:</label>
+			<input type="text" id="genre" name="genre" />
+			<label for="location">Location:</label>
+			<input type="text" id="location" name="location" /> <br />
+			<input type="submit" value="Search" id="search-btn" />
+			</p>
+		</form>
+	</section>
 
-    <main>
-        <!-- genre cards go here -->
-        <div class="container">
+	<main>
+		<!-- genre cards go here -->
+		<div class="container"></div>
 
-        </div>
+		<div class="container"></div>
 
-        <div class="container">
+		<div class="container"></div>
 
-        </div>
+		<div class="container"></div>
 
-        <div class="container">
+		<div class="container"></div>
 
-        </div>
-
-        <div class="container">
-
-        </div>
-
-        <div class="container">
-
-        </div>
-
-        <div class="container">
-
-        </div>
-
-    </main>
+		<div class="container"></div>
+	</main>
 </body>
+
 </html>
