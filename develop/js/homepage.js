@@ -9,7 +9,8 @@ let genreInput = document.querySelector("#genre-input");
 let locationInput = document.querySelector("#location-input");
 
 // genre card selectors
-let genreContainerEl = document.querySelectorAll(".genre-card"); 
+let genreContainerEl = document.querySelector(".genre-card"); 
+
 
 // form function
 /*
@@ -17,7 +18,7 @@ let genreContainerEl = document.querySelectorAll(".genre-card");
     - save values in local storage
 
 */
-function generateResults(event) {
+function saveInput(event) {
 
     event.preventDefault();
 
@@ -25,28 +26,35 @@ function generateResults(event) {
     let genre = genreInput.value;
     let location = locationInput.value;
 
+
+
     localStorage.setItem("artist", artist);
     localStorage.setItem("genre", genre);
     localStorage.setItem("location", location);
 
-    displaySearch();
+    console.log("artist: ", artist)
+    console.log("genre: ", genre)
+    console.log("location: ", location)
+    displaySearchPage();
+
 }
 
 // genre card function (similar to generateResults)
  function genreSearch(event) {
 
     let genre = event.target.textContent.trim();
-
+    
     localStorage.setItem("genre", genre);
-
-    displaySearch();
+    console.log("genre: ", genre);
+    displaySearchPage();
  }
 
  // redirects homepage to search page
- function displaySearch() {
-    location.replace("./search-page.html");
+ function displaySearchPage() {
+    let origin = location.origin;
+    origin.replace("./search-page.html");
  }
 
  // add event handlers for search form and genre cards respectively
-searchForm.addEventListener("submit", generateResults);
-genreContainerEl.addEventListener("click", genreSearch);
+searchForm.addEventListener("submit", saveInput);
+// genreContainerEl.onclick = function() {genreSearch()};
