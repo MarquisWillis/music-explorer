@@ -58,3 +58,20 @@ function saveInput(event) {
  // add event handlers for search form and genre cards respectively
 searchForm.addEventListener("submit", saveInput);
 // genreContainerEl.onclick = function() {genreSearch()};
+
+
+// ADD PSUEDO CODE
+
+// form element selectors
+let searchForm2 = document.querySelector("#search-form2");
+let artistInput2 = document.querySelector("#artist-input2");
+let genreInput2 = document.querySelector("#genre-input2");
+let locationInput2 = document.querySelector("#location-input2");
+
+let mapContainerEl = document.querySelector("#map-container"); 
+
+function generateMap(event) {
+    event.preventDefault();
+}
+
+searchForm.addEventListener("submit", generateMap);

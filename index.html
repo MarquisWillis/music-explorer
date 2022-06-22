@@ -13,8 +13,10 @@
 
 <body>
 
-    <nav class="flex tracking-widest ">
-        <span ><h1 class="ml-10" class="justify-start">Concert Finder</h1></span>
+    <nav class="flex">
+        <span>
+            <h1 class="ml-10" class="justify-start">Concert Finder</h1>
+        </span>
 
         <span id="navbar-link"> <a href="./search-page.html">
                 <h2 class="ml-80 justify-end">Search Page</h2>
@@ -77,7 +79,7 @@
 
 
 
-        <div class="container genre-card text-center border-solid border-4 border-black bbg-green-400 shadow-xl ml-28">
+        <div class="container genre-card text-center border-solid border-4 border-black bg-green-400 shadow-xl ml-28">
 
             <section class="countryCard mt-20">
 
@@ -117,6 +119,34 @@
 
 
     </main>
+
+    <section id="searchResults" class="hidden">
+        <form id="search-form2">
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist-input" name="fname">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre-input" name="genre">
+            <label for="location">Location:</label>
+            <input type="text" id="location-input" name="location"> <br>
+
+            <input type="submit" value="Search" id="search-btn">
+        </form>
+        <aside>
+            <!--popular artist by genre (did we want to keep this part?)-->
+            <h4>Popular Artists</h4>
+            <div class="container" id="popArtist2"></div>
+        </aside>
+
+
+        <div class="container" id="search-result2">
+            <!--results-->
+        </div>
+
+        <div class="container" id="map-container2">
+            <!-- map goes here -->
+        </div>
+    </section>
+
 </body>
 
 
