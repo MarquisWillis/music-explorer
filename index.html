@@ -25,23 +25,8 @@
 
     </nav>
 
-    <section>
-        <!-- form goes here -->
-        <form class="block ml-96" id="search-form">
 
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist-input" name="artist">
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre-input" name="genre">
-            <label for="location">Location:</label>
-            <input type="text" id="location-input" name="location"> <br>
-
-            <input type="submit" value="Search" id="search-btn">
-            <button class="bg-cyan-400 rounded" id="searchButton">Search</button>
-        </form>
-    </section>
-
-    <main class="container" id="genre-container">
+    <main class="flex basis-4/5" id="genre-container">
         <!-- genre cards go here -->
 
 
@@ -131,11 +116,7 @@
 
             <input type="submit" value="Search" id="search-btn">
         </form>
-        <aside>
-            <!--popular artist by genre (did we want to keep this part?)-->
-            <h4>Popular Artists</h4>
-            <div class="container" id="popArtist2"></div>
-        </aside>
+
 
 
         <div class="container" id="search-result2">
@@ -149,6 +130,18 @@
 
 </body>
 
+<aside class=" h-max flex basis-1/5 border-2 border-gray-400">
+    <form id="search-form" class=" flex flex-wrap">
+        <label for="artist" class="w-1/12 mb-5 mt-11 ml-8 flex justify-center" >Artist:</label>
+        <input type="text" id="artist-input" name="fname" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 mt-10 bg-green-100 text-slate-900">
+        <label for="genre" class="w-1/12 my-6 ml-8 flex justify-center">Genre:</label>
+        <input type="text" id="genre-input" name="genre" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100">
+        <label for="location" class="w-1/12 my-6 ml-8 flex justify-center">Location:</label>
+        <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100"> <br>
+
+        <input type="submit" value="Search" id="search-btn" class="w-1/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-36">
+    </form>
+</aside>
 
 
 </html>
