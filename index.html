@@ -11,137 +11,148 @@
     <script src="./develop/js/homepage.js"></script>
 </head>
 
-<body>
 
-    <nav class="flex">
+
+
+
+
+<body class="bg-black">
+
+    <header class="flex justify-center h-10" >
         <span>
-            <h1 class="ml-10" class="justify-start">Concert Finder</h1>
+            <h1 class=" mt-4 text-white text-3xl">Concert Finder</h1>
         </span>
+    
+    </header>
 
-        <span id="navbar-link"> <a href="./search-page.html">
-                <h2 class="ml-80 justify-end">Search Page</h2>
-            </a> </span>
-
-
-    </nav>
+    
 
 
-    <main class="flex basis-4/5" id="genre-container">
+
+
+    <main class="flex flex-wrap mt-16" id="genre-container">
         <!-- genre cards go here -->
 
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-rose-400 shadow-xl ml-28">
-            <section class="rockCard mt-20">
-
-
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-white-900 hover:underline"> Rock</p>
-
+        <aside class="w-80 border-2 border-gray-400">
+            <section id="search-form" class=" flex flex-wrap">
+                <label for="artist" class="w-1/12 mt-11 mb-6 ml-32 flex justify-center text-white text-xl" >Artist:</label>
+                <input type="text" id="artist-input" name="fname" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 bg-green-100 text-slate-900 ml-12">
+                <label for="genre" class="w-1/12 ml-32 flex justify-center text-white text-xl">Genre:</label>
+                <input type="text" id="genre-input" name="genre" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12">
+                <label for="location" class="w-1/12 ml-32 flex justify-center text-white text-xl">Location:</label>
+                <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12"> <br>
+        
+                <input type="submit" value="Search" id="search-btn" class="w-2/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-20">
             </section>
+        </aside>
+
+        <section class="basis-4/6 flex flex-wrap justify-center items-center ml-52 border-2 border-gray-400 ">
+            <div class=" genre-card text-center  border-solid border-2 border-white bg-rose-400 shadow-xl w-1/4 h-1/3">
+                <section class="rockCard mt-12">
+    
+    
+                    <p class="block text-2xl leading-tight font-semibold text-white-900 hover:underline"> Rock</p>
+    
+                </section>
+    
+    
+            </div>
+    
+            <div class=" genre-card text-center border-solid border-2 border-white bg-fuchsia-700 shadow-xl w-1/4 h-1/3 ml-8">
+    
+                <section class="popCard mt-12">
+    
+                    <p class="block mt-1 text-2xl leading-tight font-semibold text-gray-900 hover:underline"> Pop</p>
+    
+                </section>
+    
+    
+            </div>
+    
+            <div class="genre-card text-center border-solid border-2 border-white bg-sky-800 shadow-xl w-1/4 h-1/3 ml-8">
+    
+                <section class="rapCard mt-12">
+                    <p class="block mt-1 text-2xl leading-tight font-semibold text-gray-900 hover:underline"> Rap</p>
+                </section>
+    
+    
+    
+            </div>
+    
+    
+    
+            <div class="genre-card text-center border-solid border-2 border-white bg-green-400 shadow-xl w-1/4 h-1/3">
+    
+                <section class="countryCard mt-12">
+    
+                    <p class="block items-center text-2xl leading-tight font-semibold text-gray-900 hover:underline"> Country
+                    </p>
+    
+    
+                </section>
+    
+    
+    
+            </div>
+    
+            <div class=" genre-card text-center border-solid border-2 border-white bg-amber-400 shadow-xl w-1/4 h-1/3 ml-8 ">
+    
+                <section class="instrumentalCard mt-12">
+                    <p class="block mt-1 text-2xl leading-tight font-semibold text-gray-900 hover:underline">
+                        Instrumental</p>
+    
+                </section>
+    
+    
+    
+            </div>
+    
+            <div class=" genre-card text-center border-solid border-2 border-white bg-red-500 shadow-xl w-1/4 h-1/3 ml-8">
+    
+                <section class="animeCard mt-12">
+                    <p class="block mt-1 text-2xl leading-tight font-semibold text-gray-900 hover:underline">Anime Music
+                    </p>
+    
+                </section>
+    
+    
+    
+            </div>
+    
+    
+        </main>
+    
+        <section id="searchResults" class="hidden">
+            <form id="search-form2">
+                <label for="artist">Artist:</label>
+                <input type="text" id="artist-input" name="fname">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre-input" name="genre">
+                <label for="location">Location:</label>
+                <input type="text" id="location-input" name="location"> <br>
+    
+                <input type="submit" value="Search" id="search-btn">
+            </form>
+    
+    
+    
+            <div class="container" id="search-result2">
+                <!--results-->
+            </div>
+    
+            <div class="container" id="map-container2">
+                <!-- map goes here -->
+            </div>
+        </section>
+
+        </section>
 
 
-        </div>
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-fuchsia-700 shadow-xl">
-
-            <section class="popCard mt-20">
-
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Pop</p>
-
-            </section>
-
-
-        </div>
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-sky-800 shadow-xl">
-
-            <section class="rapCard mt-20">
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Rap</p>
-            </section>
-
-
-
-        </div>
-
-
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-green-400 shadow-xl ml-28">
-
-            <section class="countryCard mt-20">
-
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline"> Country
-                </p>
-
-
-            </section>
-
-
-
-        </div>
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-amber-400 shadow-xl ">
-
-            <section class="instrumentalCard mt-20">
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline">
-                    Instrumental</p>
-
-            </section>
-
-
-
-        </div>
-
-        <div class="container genre-card text-center border-solid border-4 border-black bg-red-500 shadow-xl">
-
-            <section class="animeCard mt-20">
-                <p class="block mt-1 text-3xl leading-tight font-semibold text-gray-900 hover:underline">Anime Music
-                </p>
-
-            </section>
-
-
-
-        </div>
-
-
-    </main>
-
-    <section id="searchResults" class="hidden">
-        <form id="search-form2">
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist-input" name="fname">
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre-input" name="genre">
-            <label for="location">Location:</label>
-            <input type="text" id="location-input" name="location"> <br>
-
-            <input type="submit" value="Search" id="search-btn">
-        </form>
-
-
-
-        <div class="container" id="search-result2">
-            <!--results-->
-        </div>
-
-        <div class="container" id="map-container2">
-            <!-- map goes here -->
-        </div>
-    </section>
+       
 
 </body>
 
-<aside class=" h-max flex basis-1/5 border-2 border-gray-400">
-    <form id="search-form" class=" flex flex-wrap">
-        <label for="artist" class="w-1/12 mb-5 mt-11 ml-8 flex justify-center" >Artist:</label>
-        <input type="text" id="artist-input" name="fname" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 mt-10 bg-green-100 text-slate-900">
-        <label for="genre" class="w-1/12 my-6 ml-8 flex justify-center">Genre:</label>
-        <input type="text" id="genre-input" name="genre" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100">
-        <label for="location" class="w-1/12 my-6 ml-8 flex justify-center">Location:</label>
-        <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100"> <br>
 
-        <input type="submit" value="Search" id="search-btn" class="w-1/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-36">
-    </form>
-</aside>
 
 
 </html>
