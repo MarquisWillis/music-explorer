@@ -27,4 +27,3 @@ function generateSearchResults() {
 }
 // event listeners
 searchBtn.addEventListener("submit", generateSearchResults);
-
