@@ -2,8 +2,8 @@
 
 // static selectors
 let artistInput = document.querySelector("#artist-input");
-let genreInput = document.querySelector("#artist-input");
-let locationInput = document.querySelector("#artist-input");
+let genreInput = document.querySelector("#genre-input");
+let locationInput = document.querySelector("#location-input");
 let searchBtn = document.querySelector("#search-btn");
 
 let genreCardEl = document.querySelectorAll(".genreCard");
@@ -27,3 +27,4 @@ function generateSearchResults() {
 }
 // event listeners
 searchBtn.addEventListener("submit", generateSearchResults);
+
