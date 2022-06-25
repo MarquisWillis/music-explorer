@@ -31,12 +31,29 @@ form {
     width: 50%;
     height: 300px;
 }
-ol {list-style: none; counter-reset: li}
+
 
 input {
     text-indent: 5%;
 }
+#eventTitle {
+    position: relative;
+}
+#eventCards {
+    position: absolute;
+    margin-top: 8%;
 
-.eventCard {
-    color: aliceblue;
+}
+
+@media screen and (max-width: 1024px) {
+    aside {
+        margin-left: 34%;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:576px)  {
+
 }
