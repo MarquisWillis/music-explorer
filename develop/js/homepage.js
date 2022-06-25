@@ -2,28 +2,46 @@
 
 // static selectors
 let artistInput = document.querySelector("#artist-input");
-let genreInput = document.querySelector("#artist-input");
-let locationInput = document.querySelector("#artist-input");
+let genreInput = document.querySelector("#genre-input");
+let locationInput = document.querySelector("#location-input");
 let searchBtn = document.querySelector("#search-btn");
 
 let genreCardEl = document.querySelectorAll(".genreCard");
 
 let searchContainerEl = document.querySelector("#search-result");
 let additionalContainerEl = document.querySelector("#additional-container");
-const token = "262416fb5ae704423";
+
+const token = "a8yMuGaFL4Zrzhb2V2sOhHkAOPVwaAEy";
+
+
 
 // functions
-function generateSearchResults() {
-    let artist = artistInput.value;
-    let genre = genreInput.value;
-    let location = locationInput.value;
+function getEvents() {
 
-    let urlCurrent = `https://www.googleapis.com/customsearch/v1?${token}`;
-    fetch(urlCurrent)
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        }) 
+    let scriptTag = document.createElement("script");
+    let artist = (artistInput.value);
+    let location = (locationInput.value);
+
+    scriptTag.setAttribute("src", `https://app.ticketmaster.com/discovery/v2/events?apikey=${token}&keyword=${artist}&locale=*&city=${location}&callback=eventHandler`)
+
+    document.querySelector("head").appendChild(scriptTag);
 }
+
+function eventHandler(data) {
+    console.log(data);
+}
+
+function testTicket() {
+    let artist = (artistInput.value);
+    let location = (locationInput.value);
+
+    let urlCurrent = `https://app.ticketmaster.com/discovery/v2/events?apikey=${token}&keyword=${artist}&locale=*&city=${location}&callback=eventHandler`
+
+    fetch(urlCurrent).then(function(response) {
+        console.log(response);
+        return response.json();
+    })
+}
+
 // event listeners
-searchBtn.addEventListener("submit", generateSearchResults);
+searchBtn.addEventListener("click", testTicket);
