@@ -40,8 +40,15 @@ input {
     position: relative;
 }
 #eventCards {
-    position: absolute;
-    margin-top: 8%;
+    position: relative;
+
+
+}
+
+.storage-list-item:hover {
+    background-color: #0EA5E9;
+    border-radius: 4px;
+
 
 }
 
@@ -51,9 +58,39 @@ input {
         margin-bottom: 20px;
     }
 
+    #newArtists {
+        position: relative;
+        top: 10px;
+        
+    }
+
 
 }
 
 @media screen and (max-width:576px)  {
+    aside {
+        margin-left: 34%;
+        margin-bottom: 20px;
+    }
+
+    #newArtists {
+        position: relative;
+        top: 10px;
+        width: 580px;
+        
+    }
+    #event-container {
+        position: relative;
+        left: 90px;
+    }
+    h1 {
+        position: relative;
+        left: 70px;
+    }
+    #eventTitle {
+        font-size: 18pt;
+    }
+
+
 
 }
