@@ -11,6 +11,18 @@ let eventContainerEl = document.querySelector("#event-container");
 
 const token = "a8yMuGaFL4Zrzhb2V2sOhHkAOPVwaAEy";
 
+let date1 = document.getElementById("event1");
+let date2 = document.getElementById("event2");
+let date3 = document.getElementById("event3");
+let date4 = document.getElementById("event4");
+let date5 = document.getElementById("event5");
+
+let time1 = document.getElementById("time1");
+let time2 = document.getElementById("time2");
+let time3 = document.getElementById("time3");
+let time4 = document.getElementById("time4");
+let time5 = document.getElementById("time5");
+
 
 // functions
 
@@ -20,38 +32,45 @@ function testTicket() {
 
     let urlCurrent = `https://app.ticketmaster.com/discovery/v2/events?apikey=${token}&keyword=${artist}&locale=*&city=${location}`
 
-    fetch(urlCurrent).then(function(response) {
+    fetch(urlCurrent).then(function (response) {
         console.log(response);
         return response.json();
-    }).then(function(data) {
+    }).then(function (data) {
         console.log(data);
 
-        for (let i = 0; i < data._embedded.events.length; i++) {
-
-            
-            let currentDate = data._embedded.events[i].dates.start.localDate;
-            let currentTime = data._embedded.events[i].dates.start.localTime;
-
-            console.log(currentDate, currentTime)
 
 
-            let eventCard = document.createElement("div")
 
-            let dateEl = document.createElement("p")
-            let timeEl = document.createElement("p");
-            
-            dateEl.textContext = currentDate
-            timeEl.textContext = currentTime
-            
-            eventCard.appendChild(dateEl)
-            eventCard.appendChild(timeEl)
-            
-            eventContainerEl.appendChild(eventCard)
-        }
+        let currentDate = data._embedded.events[0].dates.start.localDate;
+        let currentTime = data._embedded.events[0].dates.start.localTime;
+
+        let currentDate2 = data._embedded.events[1].dates.start.localDate;
+        let currentTime2 = data._embedded.events[1].dates.start.localTime;
+
+        let currentDate3 = data._embedded.events[2].dates.start.localDate;
+        let currentTime3 = data._embedded.events[2].dates.start.localTime;
+
+        let currentDate4 = data._embedded.events[3].dates.start.localDate;
+        let currentTime4 = data._embedded.events[3].dates.start.localTime;
+
+        let currentDate5 = data._embedded.events[4].dates.start.localDate;
+        let currentTime5 = data._embedded.events[4].dates.start.localTime;
+
+        date1.innerHTML = currentDate
+        date2.innerHTML = currentDate2
+        date3.innerHTML = currentDate3
+        date4.innerHTML = currentDate4
+        date5.innerHTML = currentDate5
+        time1.innerHTML = currentTime
+        time2.innerHTML = currentTime2
+        time3.innerHTML = currentTime3
+        time4.innerHTML = currentTime4
+        time5.innerHTML = currentTime5
+
     })
 
-        
-    }
+
+}
 
 // event listeners
 searchBtn.addEventListener("click", testTicket);
