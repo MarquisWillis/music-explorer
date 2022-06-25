@@ -1,57 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concert Finder</title>
+    <title>Music Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./develop/js/homepage.js" defer></script>
+
 </head>
-<body>
-    <header>
-        <!-- nav bar goes here -->
-        <h1>Concert Finder</h1>
+
+
+
+
+
+
+<body class="bg-black">
+
+    <header class="flex justify-center h-10">
+        <span>
+            <h1 class=" mt-4 text-white text-3xl">Music Explorer</h1>
+        </span>
+
     </header>
 
-    <section>
-        <!-- form goes here -->
-        <form>
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist" name="fname">
-            <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre">
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location"> <br>
 
-            <input type="submit" value="Search" id="search-btn">
-          </form>
-    </section>
 
-    <main>
+
+
+
+    <main class="flex flex-wrap mt-16" id="genre-container">
         <!-- genre cards go here -->
-        <div class="container">
+
+        <aside class="w-80 border-2 border-gray-400">
+            <section id="search-form" class=" flex flex-wrap">
+                <label for="artist"
+                    class="w-1/12 mt-11 mb-6 ml-32 flex justify-center text-white text-xl">Artist:</label>
+                <input type="text" id="artist-input" name="fname"
+                    class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 bg-green-100 text-slate-900 ml-12">
+                <label for="location" class="w-1/12 ml-32 flex justify-center text-white text-xl">Location:</label>
+                <input type="text" id="location-input" name="location"
+                    class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12"> <br>
+                <button id="searchButton"
+                    class="w-2/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-20">Search</button>
+
+            </section>
+        </aside>
+
+        <div id="event-container" class="basis-4/6 flex flex-wrap justify-center  ml-52 border-2 border-gray-400 text-white">
+            <h2 class="flex justify-center text-3xl text-white mx-52 my-10">Event Dates and Start Times</h2>
+
+            <section class="flex align-center">
+
+                <a href="" target="_blank" id="e1"> <div class="event-card p-4 mx-10 my-10 rounded-lg bg-yellow-100 hover:bg-yellow-200 justify-center text-black">
+                    <p id="event1"></p>
+    
+                    <p id="time1"></p>
+                </div> </a>
+    
+                <a href="" target="_blank" id="e2"> <div class="event-card p-4 mx-10 my-10 rounded-lg bg-orange-100 hover:bg-orange-200 justify-center text-black">
+                    <p id="event2"></p>
+    
+                    <p id="time2"></p>
+                </div></a>
+    
+                <a href="" target="_blank" id="e3"><div class="event-card p-4 mx-10 my-10 rounded-lg bg-teal-100 hover:bg-teal-200 justify-center text-black">
+                    <p id="event3"></p>
+    
+                    <p id="time3"></p>
+                </div> </a>
+    
+                <a href="" target="_blank" id="e4" ><div class="event-card p-4 mx-10 my-10 rounded-lg bg-fuchsia-100 hover:bg-fuchsia-200 justify-center text-black">
+                    <p id="event4"></p>
+    
+                    <p id="time4"></p>
+                </div> </a>
+    
+                <a href="" target="_blank" id="e5"><div class="event-card p-4 mx-10 my-10 rounded-lg bg-green-100 hover:bg-green-200 justify-center text-black">
+                    <p id="event5"></p>
+    
+                    <p id="time5"></p>
+                </div> </a> 
 
         </div>
 
-        <div class="container">
 
-        </div>
-
-        <div class="container">
-
-        </div>
-
-        <div class="container">
-
-        </div>
-
-        <div class="container">
-
-        </div>
-
-        <div class="container">
-
-        </div>
 
     </main>
+
+    <section id="newArtists">
+        <h2 class="text-4xl text-white flex justify-center mt-4">Similar Artists</h2>
+        <ol id="artistList" class="my-10 flex justify-center flex flex-wrap  text-xl">
+            <li id="artist1" class="p-2 mx-10 my-10 rounded-lg bg-green-100 text-black"></li>
+            <li id="artist2" class="p-2 mx-10 my-10  rounded-lg bg-orange-100"></li>
+            <li id="artist3" class="p-2 mx-10 my-10  rounded-lg bg-sky-100 "></li>
+            <li id="artist4" class="p-2 mx-10 my-10  rounded-lg bg-red-100"></li>
+            <li id="artist5" class="p-2 mx-10 my-10  rounded-lg bg-yellow-100"></li>
+            <li id="artist6" class="p-2 mx-10 my-10  rounded-lg bg-lime-100"></li>
+            <li id="artist7" class="p-2 mx-10 my-10  rounded-lg bg-teal-100"></li>
+            <li id="artist8" class="p-2 mx-10 my-10  rounded-lg bg-fuchsia-100"></li>
+            <li id="artist9" class="p-2 mx-10 my-10  rounded-lg bg-indigo-100"></li>
+            <li id="artist10" class="p-2 mx-10 my-10  rounded-lg bg-violet-100"></li>
+
+        </ol>
+
+    </section>
+
+
+
+
+
+
+    <script src="./script.js"></script>
 </body>
+
+
+
+
 </html>
