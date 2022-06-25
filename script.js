@@ -1,9 +1,6 @@
-//var apiKey = "438460-OwenNewl-STJHC920"
+
 var searchButton = document.getElementById("searchButton")
-
-
 const API_KEY = "438460-OwenNewl-STJHC920"
-
 var firstArtist = document.getElementById("artist1")
 var secondArtist = document.getElementById("artist2")
 var thirdArtist = document.getElementById("artist3")
@@ -14,10 +11,7 @@ var seventhArtist = document.getElementById("artist7")
 var eigthArtist = document.getElementById("artist8")
 var ninthArtist = document.getElementById("artist9")
 var tenthArtist = document.getElementById("artist10")
-
-
 var artistList = document.getElementById("artistList")
-
 
 function getSimilarArtists() {
     let scriptTag = document.createElement('script');
@@ -29,7 +23,7 @@ function getSimilarArtists() {
 
 
 function myFunction(data) {
-    //TODO code to handle incoming data from API call
+    //code to handle incoming data from API call
     console.log(data)
     firstArtist.innerHTML = "1:    "  + data.Similar.Results[0].Name
     secondArtist.innerHTML = "2:    "  + data.Similar.Results[1].Name
@@ -47,55 +41,9 @@ function myFunction(data) {
 
 }
 
-
-
-/*
-function getData() {
-    getArtist();
-
-    var artistApiCall = getArtist();
-
-    var queryURL = "https://tastedive.com/api/similar?q=" + artistApiCall +"&k=" + apiKey
-    console.log(queryURL)
-
-
-
-    fetch(queryURL, {mode: "no-cors"})
-        .then(function(response){
-            console.log(response)
-            return response.json()
-        })
-        .then((data) => {
-            console.log(data)
-            return data
-            
-          })
-        .catch(function(error) {
-            console.log(error)
-        })
-
-}
-*/
-
 searchButton.addEventListener("click", function () {
 
     getSimilarArtists();
     artistList.classList("list-decimal") 
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-    
-
-
 
 })
