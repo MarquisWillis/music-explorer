@@ -3,24 +3,24 @@ let genreInput = document.querySelector("#genre-input");
 let locationInput = document.querySelector('#location-input');
 let searchBtn = document.getElementById("search-btn");
 
-const API_KEY = "RzI45m3FO2OtUTWzp7AQgANbQRJxY157"
+const ticketAPI = "RzI45m3FO2OtUTWzp7AQgANbQRJxY157"
 
 function getLocation() {
-    let scriptTag = document.createElement('script');
-    let queryString = document.querySelector('#location-input').value
+    var requestUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=${ticketAPI}&locale=*&city=${locationInput}`
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
 
-    scriptTag.setAttribute('src', `https://app.ticketmaster.com/discovery/v2/events?apikey=${API_KEY}&keyword=${artistInput}&locale=*&city=${locationInput}`)
-    document.querySelector('head').appendChild(scriptTag)
-
-    function result (data) {
-        //TODO code to handle incoming data from API call
-        console.log(data)
-        searchBtn.innerHTML = data.location.Results[0].Name
-    }
+            for (let i = 0; i < data.length; i++) {
+                let listItem = document.createElement('li');
+                listItem.textContent = data[i].html_url
+                locationResult.appendChild(listItem);
+            }
+        })
 }
 
-searchBtn.addEventListener ("click", function ()
- {
 
-    getLocation();
-})
+searchBtn.addEventListener('click', getLocation);
