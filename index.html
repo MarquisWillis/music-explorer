@@ -8,8 +8,8 @@
     <title>Concert Finder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./develop/js/homepage.js"></script>
 
+    <script src="./develop/js/homepage.js" defer></script>
 
 </head>
 
@@ -20,14 +20,14 @@
 
 <body class="bg-black">
 
-    <header class="flex justify-center h-10" >
+    <header class="flex justify-center h-10">
         <span>
             <h1 class=" mt-4 text-white text-3xl">Concert Finder</h1>
         </span>
-    
+
     </header>
 
-    
+
 
 
 
@@ -37,17 +37,19 @@
 
         <aside class="w-80 border-2 border-gray-400">
             <section id="search-form" class=" flex flex-wrap">
-                <label for="artist" class="w-1/12 mt-11 mb-6 ml-32 flex justify-center text-white text-xl" >Artist:</label>
-                <input type="text" id="artist-input" name="fname" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 bg-green-100 text-slate-900 ml-12">
-                <label for="genre" class="w-1/12 ml-32 flex justify-center text-white text-xl">Genre:</label>
-                <input type="text" id="genre-input" name="genre" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12">
+                <label for="artist"
+                    class="w-1/12 mt-11 mb-6 ml-32 flex justify-center text-white text-xl">Artist:</label>
+                <input type="text" id="artist-input" name="fname"
+                    class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 bg-green-100 text-slate-900 ml-12">
                 <label for="location" class="w-1/12 ml-32 flex justify-center text-white text-xl">Location:</label>
                 <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12"> <br>
                 <button  id="searchButton" class="w-2/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-20">Search</button>
+
             </section>
         </aside>
 
         <section class="basis-4/6 flex flex-wrap justify-center items-center ml-52 border-2 border-gray-400 ">
+
             
     
     
@@ -70,6 +72,7 @@
             </ol>
             
         </section>
+
 
 
 
