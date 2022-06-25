@@ -1,4 +1,3 @@
-// ADD PSUEDO CODE
 
 // static selectors
 let artistInput = document.querySelector("#artist-input");
@@ -88,3 +87,4 @@ function testTicket() {
 
 // event listeners
 searchBtn.addEventListener("click", testTicket);
+
