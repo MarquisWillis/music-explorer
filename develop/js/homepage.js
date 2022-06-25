@@ -1,29 +1,26 @@
-// ADD PSUEDO CODE
-
-// static selectors
 let artistInput = document.querySelector("#artist-input");
 let genreInput = document.querySelector("#genre-input");
-let locationInput = document.querySelector("#location-input");
-let searchBtn = document.querySelector("#search-btn");
+let locationInput = document.querySelector('#location-input');
+let searchBtn = document.getElementById("search-btn");
 
-let genreCardEl = document.querySelectorAll(".genreCard");
+const API_KEY = "RzI45m3FO2OtUTWzp7AQgANbQRJxY157"
 
-let searchContainerEl = document.querySelector("#search-result");
-let additionalContainerEl = document.querySelector("#additional-container");
-const token = "262416fb5ae704423";
+function getLocation() {
+    let scriptTag = document.createElement('script');
+    let queryString = document.querySelector('#location-input').value
 
-// functions
-function generateSearchResults() {
-    let artist = artistInput.value;
-    let genre = genreInput.value;
-    let location = locationInput.value;
+    scriptTag.setAttribute('src', `https://app.ticketmaster.com/discovery/v2/events?apikey=${API_KEY}&keyword=${artistInput}&locale=*&city=${locationInput}`)
+    document.querySelector('head').appendChild(scriptTag)
 
-    let urlCurrent = `https://www.googleapis.com/customsearch/v1?${token}`;
-    fetch(urlCurrent)
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        }) 
+    function result (data) {
+        //TODO code to handle incoming data from API call
+        console.log(data)
+        searchBtn.innerHTML = data.location.Results[0].Name
+    }
 }
-// event listeners
-searchBtn.addEventListener("submit", generateSearchResults);
+
+searchBtn.addEventListener ("click", function ()
+ {
+
+    getLocation();
+})
