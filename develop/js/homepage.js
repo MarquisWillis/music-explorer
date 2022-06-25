@@ -67,6 +67,20 @@ function testTicket() {
         time4.innerHTML = currentTime4
         time5.innerHTML = currentTime5
 
+        let e1 = document.getElementById("e1")
+        let e2 = document.getElementById("e2")
+        let e3 = document.getElementById("e3")
+        let e4 = document.getElementById("e4")
+        let e5 = document.getElementById("e5")
+
+
+        e1.setAttribute("href", data._embedded.events[0].url)
+        e2.setAttribute("href", data._embedded.events[1].url)
+        e3.setAttribute("href", data._embedded.events[2].url)
+        e4.setAttribute("href", data._embedded.events[3].url)
+        e5.setAttribute("href", data._embedded.events[4].url)
+
+
     })
 
 
