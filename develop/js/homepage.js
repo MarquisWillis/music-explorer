@@ -139,8 +139,11 @@ function displayCurrentArtist(artist, location) {
         let currentDate4 = data._embedded.events[3].dates.start.localDate;
         let currentTime4 = data._embedded.events[3].dates.start.localTime;
 
-        let currentDate5 = data._embedded.events[4].dates.start.localDate;
-        let currentTime5 = data._embedded.events[4].dates.start.localTime;
+        let currentDate5 = data._embedded.events[4]?data._embedded.events[4].dates.start.localDate:"";
+        let currentTime5 = data._embedded.events[4]?data._embedded.events[4].dates.start.localTime:"";
+
+
+
 
         date1.innerHTML = currentDate
         date2.innerHTML = currentDate2
@@ -164,7 +167,7 @@ function displayCurrentArtist(artist, location) {
         e2.setAttribute("href", data._embedded.events[1].url)
         e3.setAttribute("href", data._embedded.events[2].url)
         e4.setAttribute("href", data._embedded.events[3].url)
-        e5.setAttribute("href", data._embedded.events[4].url)
+        e5.setAttribute("href", data._embedded.events[4]?data._embedded.events[4].url:"")
 
         handleStorage();
         getSimilarArtists(artist)
