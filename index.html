@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concert Finder</title>
+    <title>Music Discoverer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
 
@@ -22,7 +22,7 @@
 
     <header class="flex justify-center h-10">
         <span>
-            <h1 class=" mt-4 text-white text-3xl">Concert Finder</h1>
+            <h1 class=" mt-4 text-white text-3xl">Music Discoverer</h1>
         </span>
 
     </header>
@@ -42,43 +42,47 @@
                 <input type="text" id="artist-input" name="fname"
                     class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 mb-5 bg-green-100 text-slate-900 ml-12">
                 <label for="location" class="w-1/12 ml-32 flex justify-center text-white text-xl">Location:</label>
-                <input type="text" id="location-input" name="location" class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12"> <br>
-                <button  id="searchButton" class="w-2/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-20">Search</button>
+                <input type="text" id="location-input" name="location"
+                    class="w-3/5 h-10 border-2 border-gray-400 rounded mx-8 my-5 bg-green-100 ml-12"> <br>
+                <button id="searchButton"
+                    class="w-2/5 h-7  rounded-lg hover:underline mx-8 my-5 bg-sky-500 hover:bg-sky-600 text-white ml-20">Search</button>
 
             </section>
         </aside>
 
-        <section class="basis-4/6 flex flex-wrap justify-center items-center ml-52 border-2 border-gray-400 ">
+        <div id="event-container"
+            class="basis-4/6 flex flex-wrap justify-center items-center ml-52 border-2 border-gray-400 ">
 
-            
-    
-    
-        </main>
-    
-        <section id="newArtists" >
-            <h2 class="text-4xl text-white flex justify-center mt-4">Similar Artists</h2>
-            <ol id="artistList" class="my-10 flex justify-center flex flex-wrap  text-xl">
-                <li id="artist1" class="p-2 mx-10 my-10 rounded-lg bg-green-100 text-black"></li>
-                <li id="artist2" class="p-2 mx-10 my-10  rounded-lg bg-orange-100"></li>
-                <li id="artist3" class="p-2 mx-10 my-10  rounded-lg bg-sky-100 "></li>
-                <li id="artist4" class="p-2 mx-10 my-10  rounded-lg bg-red-100"></li>
-                <li id="artist5" class="p-2 mx-10 my-10  rounded-lg bg-yellow-100"></li>
-                <li id="artist6" class="p-2 mx-10 my-10  rounded-lg bg-lime-100"></li>
-                <li id="artist7" class="p-2 mx-10 my-10  rounded-lg bg-teal-100"></li>
-                <li id="artist8" class="p-2 mx-10 my-10  rounded-lg bg-fuchsia-100"></li>
-                <li id="artist9" class="p-2 mx-10 my-10  rounded-lg bg-indigo-100"></li>
-                <li id="artist10" class="p-2 mx-10 my-10  rounded-lg bg-violet-100"></li>
-
-            </ol>
-            
-        </section>
+        </div>
 
 
 
+    </main>
+
+    <section id="newArtists">
+        <h2 class="text-4xl text-white flex justify-center mt-4">Similar Artists</h2>
+        <ol id="artistList" class="my-10 flex justify-center flex flex-wrap  text-xl">
+            <li id="artist1" class="p-2 mx-10 my-10 rounded-lg bg-green-100 text-black"></li>
+            <li id="artist2" class="p-2 mx-10 my-10  rounded-lg bg-orange-100"></li>
+            <li id="artist3" class="p-2 mx-10 my-10  rounded-lg bg-sky-100 "></li>
+            <li id="artist4" class="p-2 mx-10 my-10  rounded-lg bg-red-100"></li>
+            <li id="artist5" class="p-2 mx-10 my-10  rounded-lg bg-yellow-100"></li>
+            <li id="artist6" class="p-2 mx-10 my-10  rounded-lg bg-lime-100"></li>
+            <li id="artist7" class="p-2 mx-10 my-10  rounded-lg bg-teal-100"></li>
+            <li id="artist8" class="p-2 mx-10 my-10  rounded-lg bg-fuchsia-100"></li>
+            <li id="artist9" class="p-2 mx-10 my-10  rounded-lg bg-indigo-100"></li>
+            <li id="artist10" class="p-2 mx-10 my-10  rounded-lg bg-violet-100"></li>
+
+        </ol>
+
+    </section>
 
 
-       
-        <!-- <script src = "./script.js"></script> -->
+
+
+
+
+    <script src="./script.js"></script>
 </body>
 
 
