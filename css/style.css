@@ -36,3 +36,7 @@ ol {list-style: none; counter-reset: li}
 input {
     text-indent: 5%;
 }
+
+.eventCard {
+    color: aliceblue;
+}

@@ -80,7 +80,7 @@ function getData() {
 searchButton.addEventListener("click", function () {
 
     getSimilarArtists();
-    artistList.classList("list-decimal") 
+    artistList.classList.add("list-decimal") 
 
     
 
