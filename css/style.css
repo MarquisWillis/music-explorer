@@ -31,5 +31,8 @@ form {
     width: 50%;
     height: 300px;
 }
+ol {list-style: none; counter-reset: li}
 
-
+input {
+    text-indent: 5%;
+}
